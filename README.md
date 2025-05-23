@@ -43,7 +43,6 @@ fastapi_chat_api/
 
 - Python 3.11+
 - PostgreSQL 14+
-- Redis 6+
 
 ## Installation
 
@@ -91,12 +90,6 @@ SECRET_KEY=your_secret_key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=10080
 
-# Redis Configuration
-REDIS_HOST=localhost
-REDIS_PORT=6379
-REDIS_DB=0
-CACHE_EXPIRE_TIME=300
-
 # CORS Settings
 BACKEND_CORS_ORIGINS=["http://localhost:3000", "http://localhost:8000"]
 ```
@@ -136,11 +129,6 @@ uvicorn app.main:app --reload
 - `DELETE /api/v1/conversations/{conversation_id}` - Delete conversation
 
 ## Development
-
-### Running Tests
-```bash
-pytest
-```
 
 ## Contributing
 
