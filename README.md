@@ -4,12 +4,14 @@ A modern, scalable chat API built with FastAPI, PostgreSQL, and Redis.
 
 ## Features
 
+- User authentication with JWT tokens
 - Create and manage chat conversations
 - Branch conversations from any point in chat history
 - PostgreSQL for relational data storage
 - MongoDB for document storage
 - Caching support
 - Database migrations with Alembic
+- Comprehensive API documentation with Swagger UI and ReDoc
 
 ## Project Structure
 
@@ -47,7 +49,7 @@ fastapi_chat_api/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/fastapi-chat-api.git
+git clone https://github.com/ravikansal200908/fastapi-chat-backend
 cd fastapi-chat-api
 ```
 
@@ -118,8 +120,9 @@ uvicorn app.main:app --reload
 ## API Endpoints
 
 ### Authentication
-- `POST /api/v1/token` - Get access token
-- `POST /api/v1/users/` - Create new user
+- `POST /api/v1/auth/register` - Register a new user
+- `POST /api/v1/auth/login` - Login with username and password (JSON format)
+- `POST /api/v1/auth/token` - Login with OAuth2 password flow
 
 ### Users
 - `GET /api/v1/users/me` - Get current user
